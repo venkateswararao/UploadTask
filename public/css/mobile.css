@@ -1,0 +1,728 @@
+body {
+    margin: 0px;
+    padding: 0px;
+    background-color: rgba(230, 230, 230, 1) !important;
+    -webkit-overflow-scrolling: touch;
+    /*overflow-y: scroll;*/
+}
+
+.ui-page {
+    background-color: rgba(230, 230, 230, 1) !important;
+}
+
+
+
+
+/*** Submit Page ***/
+
+.submitPage {
+    background-color: rgba(255, 255, 255, 1);
+}
+
+    .submitPage .content {
+        width: 300px;
+        margin: auto;
+        text-align: center;
+        padding-top: 15px;
+    }
+
+        .submitPage .content .inputDivider {
+            padding: 10px 0;
+        }
+
+.submitPageTextBox {
+    width: 90%;
+    height: 30px;
+    border-radius: 5px;
+    border: rgba(193, 193, 193, 1) solid 1px;
+}
+
+.submitBeatButton {
+    margin-top: 20px;
+}
+
+.submitPage .backButton {
+    background-color: rgba(253, 253, 255, 1) !important;
+    height: 40px !important;
+    width: 40px !important;
+    padding: 0;
+    margin-top: 3px !important;
+    border-color: rgba(193, 193, 193, 1) !important;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/*** Main Page ***/
+
+
+.titleBar {
+    background-color: rgba(253, 253, 255, 1);
+    height: 50px;
+    border-bottom: rgba(225, 225, 225, 1) solid 2px;
+}
+
+.submitPageButton {
+    background-color: rgba(253, 253, 255, 1) !important;
+    height: 40px !important;
+    width: 40px !important;
+    padding: 0;
+    margin-top: 3px !important;
+    border-color: rgba(193, 193, 193, 1) !important;
+}
+
+.titleBar .buttonIcon {
+    color: black;
+}
+
+.slapchartLogo {
+    height: 37px;
+    width: 160px;
+    padding-top: 8px;
+    padding-left: 50%;
+    margin-left: -85px;
+}
+
+.mainPage .content {
+    width: 100%;
+    padding-bottom: 120px;
+    background-color: rgba(230, 230, 230, 1);
+}
+
+
+
+/* Beat */
+
+.beat {
+    width: 375px;
+    height: 200px;
+    /*border-radius: 3px;*/
+    margin: 0 auto 15px auto;
+    /*border-top: rgba(255, 255, 255, .8) solid 1px;*/
+    box-shadow: 2px 2px 3px 0px rgba(179, 179, 179, 1);
+    font-size: 12px;
+    background-size: cover;
+    overflow: hidden;
+}
+
+.infoBox {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.info {
+    margin: auto;
+    box-shadow: 2px 2px 3px 0px rgba(50, 50, 50, 1);
+    height: 55px;
+    width: 275px;
+    width: 80%;
+    padding-left: 15px;
+    background-color: rgba(252, 252, 252, 1);
+    border-radius: 3px;
+}
+
+.transparentPlayButton {
+    font-size: 50px;
+    width: 50px;
+    height: 50px;
+    text-shadow: none;
+    left: 155px;
+    top: 50px;
+    position: absolute;
+    opacity: 0.5;
+    color: white;
+}
+
+.beat.selected {
+    background-color: rgba(220, 220, 220, 1) !important;
+}
+
+.beat .beatInfo {
+    display: inline-block;
+    margin-left: 40px;
+    margin-top: 7px;
+    width: 100%;
+    cursor: pointer;
+}
+
+.socialbeatInfo {
+    position: relative;
+    display: inline-block;
+    margin: 20px auto;
+    text-align: center;
+    width: 100%;
+}
+
+    .socialbeatInfo .socialproducerLink {
+        font-size: 30px;
+        word-wrap: break-word;
+    }
+
+
+.beat .beatInfo .producerName {
+    padding-left: 20px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    width: 125px;
+    display: block;
+}
+
+    .beat .beatInfo .producerName .producerLink {
+        color: rgba(255, 41, 41, 1);
+        text-decoration: none;
+        font-weight: normal;
+        cursor: pointer;
+        text-shadow: none;
+        font-size: 14px;
+    }
+
+.beat .beatInfo .beatName {
+    padding-left: 20px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    width: 150px;
+    display: block;
+}
+
+.beat .beatInfo .timeAdded {
+    margin-right: 50px;
+    float: right;
+    color: rgba(151, 151, 151, 1);
+    width: 50px;
+    overflow: hidden;
+    display: inline-block;
+    margin-top: -26px;
+}
+
+.beatplaydetails {
+    display: inline-block;
+    width: 245px;
+    text-align: center;
+}
+
+.beatimage {
+    text-align: left;
+    display: inline-block;
+    width: 50px;
+}
+
+.producerImage {
+    /*background-image: url("producer_placeholder.jpg");*/
+    background-size: 40px 40px;
+    height: 40px;
+    width: 40px;
+    border-radius: 99px;
+    border: solid 1px;
+    position: absolute;
+    margin-top: 5px;
+}
+
+.currentproducerImage {
+    /*background-image: url(producer_placeholder.jpg);*/
+    /*height: 30px;
+    width: 50px;
+    border: solid 1px;*/
+    /* position: absolute; */
+    /*margin: 7px 0px;*/
+  background-size: 40px 40px;
+  height: 40px;
+  width: 40px;
+  border-radius: 99px;
+  border: solid 1px;
+  margin-top: 5px
+}
+
+
+.socialproducerImage {
+    background-size: 150px 150px;
+    height: 150px;
+    width: 150px;
+    border-radius: 99px;
+    border: solid 1px;
+    /* position: absolute; */
+    margin: 0px auto;
+}
+
+
+.beat .buttons {
+    padding-right: 7px;
+    float: right;
+    margin-top: -7px;
+}
+
+.shareButton {
+    border: rgba(232, 232, 232, 1) solid 1px;
+    display: inline-block;
+    padding: 2px;
+    font-size: 10px;
+    margin: 15px 1px;
+}
+
+    .shareButton .buttonIcon {
+        display: block;
+    }
+
+.shareText {
+    margin: -18px 0 0 25px;
+    display: inline-block;
+    padding-right: 5px;
+}
+
+
+
+
+
+#producerPopUp {
+    /*background-color: rgba(243, 240, 240, 1);*/
+    padding: 10px 0;
+    min-height: 105px;
+}
+
+    #producerPopUp .producerImage {
+        display: inline-block;
+        vertical-align: middle;
+        margin-left: 15px;
+        background-size: 90px 90px;
+        height: 90px;
+        width: 90px;
+    }
+
+    #producerPopUp .producerBio {
+        display: inline-block;
+        vertical-align: middle;
+        margin-left: 130px;
+        margin-right: 15px;
+        display: flex;
+        align-items: center;
+        font-size: 10px;
+    }
+
+    #producerPopUp .bioLabel {
+        font-weight: bold;
+    }
+
+.boldProducerName {
+    font-size: 12px;
+    font-weight: bold;
+}
+
+
+
+/* player widget */
+body {
+    min-height: 100%;
+    position: relative;
+    padding-bottom: [footer-height];
+}
+
+.slapchartPlayerWidget {
+    position: fixed;
+    height: 150px;
+    width: 100%;
+    background-color: rgba(253, 253, 255, 1);
+    z-index: 99;
+    left: 0;
+    border-top: solid 1px rgba(227, 224, 221, 1);
+    transform: translateZ(0);
+    -moz-transform: translatez(0);
+    -ms-transform: translatez(0);
+    -o-transform: translatez(0);
+    -webkit-transform: translateZ(0);
+    -webkit-font-smoothing: antialiased;
+    bottom: 0px;
+}
+
+    .slapchartPlayerWidget .divider {
+        margin: 0 5px;
+    }
+
+.beatInfoInPlayer {
+    cursor: pointer;
+    width: 350px;
+    font-size: 12px;
+    /* margin: 13px 15px 0px 15px; */
+    padding-bottom: 3px;
+    text-align: left;
+    margin: 2px auto;
+    /* margin: -31px auto 0 auto !important; */
+}
+
+.controls {
+    text-align: center;
+    height: 50px;
+    margin: 0px auto;
+    margin-left: 12px;
+    margin-top: 18px;
+}
+
+    .controls .button {
+        display: inline-block;
+        margin: -5px 7px;
+        cursor: pointer;
+        position: fixed;
+    }
+
+    .controls .buttonIcon {
+        font-size: 40px;
+    }
+
+    .controls .backButton {
+        margin-left: -145px;
+    }
+
+    .controls .backTenSecondsButton {
+        margin-left: -85px;
+    }
+
+    .controls .playButton {
+        margin-left: -25px;
+    }
+
+    .controls .forwrardTenSecondsButton {
+        margin-left: 40px;
+    }
+
+    .controls .nextButton {
+        margin-left: 95px;
+    }
+
+    .controls .playButton .buttonIcon {
+        font-size: 50px;
+        margin-top: -6px;
+    }
+
+
+    /*Admin Player Widgets*/
+
+.slapchartPlayerWidgetadmin {
+    position: fixed;
+    height: 150px;
+    width: 100%;
+    background-color: rgba(253, 253, 255, 1);
+    z-index: 99;
+    left: 0;
+    border-top: solid 1px rgba(227, 224, 221, 1);
+    transform: translateZ(0);
+    -moz-transform: translatez(0);
+    -ms-transform: translatez(0);
+    -o-transform: translatez(0);
+    -webkit-transform: translateZ(0);
+    -webkit-font-smoothing: antialiased;
+    bottom: 0px;
+}
+
+    .slapchartPlayerWidgetadmin .divider {
+        margin: 0 5px;
+    }
+
+.beatInfoInPlayeradmin {
+    cursor: pointer;
+    width: 350px;
+    font-size: 12px;
+    /* margin: 13px 15px 0px 15px; */
+    padding-bottom: 3px;
+    text-align: left;
+    margin: 2px auto;
+    /* margin: -31px auto 0 auto !important; */
+}
+
+.controlsadmin {
+    text-align: center;
+    height: 50px;
+    margin: 0px auto;
+    margin-left: 12px;
+    margin-top: 18px;
+}
+
+    .controlsadmin .button {
+        display: inline-block;
+        margin: -5px 7px;
+        cursor: pointer;
+        position: fixed;
+    }
+
+    .controlsadmin .buttonIcon {
+        font-size: 40px;
+    }
+
+    .controlsadmin .backButtonadmin {
+        margin-left: -145px;
+    }
+
+    .controlsadmin .backTenSecondsButtonadmin {
+        margin-left: -85px;
+    }
+
+    .controlsadmin .playButtonadmin {
+        margin-left: -25px;
+    }
+
+    .controlsadmin .forwrardTenSecondsButtonadmin {
+        margin-left: 40px;
+    }
+
+    .controlsadmin .nextButtonadmin {
+        margin-left: 95px;
+    }
+
+    .controlsadmin .playButtonadmin .buttonIcon {
+        font-size: 50px;
+        margin-top: -6px;
+    }
+
+
+
+
+/* slider bar */
+
+.sliderBar {
+}
+
+.ui-slider-input {
+    display: none !important;
+}
+
+.ui-slider {
+    width: 268px;
+    display: inline-block;
+}
+
+.sliderContainer {
+    width: 350px;
+    margin: 0px auto 0 auto !important;
+    /*padding-top:35px;*/
+    /*margin: 0 auto;*/
+}
+ .usermenu li{
+  padding: 12px 2px;
+  border-bottom:1px solid lightgray;
+}
+
+.currentTime {
+    /*float: left;
+    padding-top: 14px;
+    padding-left:10px;
+    padding-right: 14px;
+    width: 17px;
+    font-size: 12px;*/
+    float: left;
+    padding-top: 1.4px;
+    padding-right: 0px;
+    width: 34px;
+    font-size: 12px;
+    display: inline-block;
+}
+
+.endTime {
+    /*float: right;
+    padding-top: 14px;
+    width: 42px;
+    font-size: 12px;*/
+    position: absolute;
+    /* right: 0px; */
+    padding-left: 12px;
+    padding-top: 1.3px;
+    /* width: 30px; */
+    font-size: 12px;
+    display: inline-block;
+}
+
+.ui-slider-track {
+    height: 2px !important;
+    margin-top: -5px !important;
+    background-color: black !important;
+    top: 12px !important;
+}
+
+    .ui-slider-track.ui-mini .ui-slider-handle {
+        margin: -14px 0 0 0px !important;
+        width: 6px !important;
+        height: 25px;
+        background-color: red;
+        outline: none !important;
+        box-shadow: none !important;
+        border-radius: 0;
+    }
+
+
+input[type=range] {
+    -webkit-appearance: none;
+    margin: 10px 0;
+    width: 100%;
+}
+
+    input[type=range]:focus {
+        outline: none;
+    }
+
+    input[type=range]::-webkit-slider-runnable-track {
+        height: 2px !important;
+        margin-top: -5px !important;
+        background-color: black !important;
+        top: 12px !important;
+    }
+
+    input[type=range]::-webkit-slider-thumb {
+        -webkit-appearance: none;
+        margin: -14px 0 0 0px !important;
+        width: 6px !important;
+        height: 25px;
+        background-color: red;
+        outline: none !important;
+        box-shadow: none !important;
+        border-radius: 0;
+    }
+
+    input[type=range]:focus::-webkit-slider-runnable-track {
+        background: #2497E3;
+    }
+
+    input[type=range]::-moz-range-track {
+        height: 2px !important;
+        margin-top: -5px !important;
+        background-color: black !important;
+        top: 12px !important;
+    }
+
+    input[type=range]::-moz-range-thumb {
+        margin: -14px 0 0 0px !important;
+        width: 6px !important;
+        height: 25px;
+        background-color: red;
+        outline: none !important;
+        box-shadow: none !important;
+        border-radius: 0;
+    }
+
+    input[type=range]::-ms-track {
+        height: 2px !important;
+        margin-top: -5px !important;
+        background-color: black !important;
+        top: 12px !important;
+    }
+
+    input[type=range]::-ms-fill-lower {
+        background: #2497E3;
+        border: 0px solid #000000;
+        border-radius: 2px;
+        box-shadow: 0px 0px 0px #000000;
+    }
+
+    input[type=range]::-ms-fill-upper {
+        background: #2497E3;
+        border: 0px solid #000000;
+        border-radius: 2px;
+        box-shadow: 0px 0px 0px #000000;
+    }
+
+    input[type=range]::-ms-thumb {
+        margin: -14px 0 0 0px !important;
+        width: 6px !important;
+        height: 25px;
+        background-color: red;
+        outline: none !important;
+        box-shadow: none !important;
+        border-radius: 0;
+    }
+
+    input[type=range]:focus::-ms-fill-lower {
+        background: #2497E3;
+    }
+
+    input[type=range]:focus::-ms-fill-upper {
+        background: #2497E3;
+    }
+
+
+
+
+
+@media only screen and (max-width: 320px) {
+    .ui-slider {
+        width: 250px;
+        display: inline-block;
+    }
+
+    .currentTime {
+        float: left;
+        padding-top: 1.1px;
+        padding-left: 6px;
+        width: 32px;
+        font-size: 12px;
+        display: inline-block;
+    }
+
+    .endTime {
+        /*position: relative;
+         right: 0px; */
+        padding-left: 6px;
+        padding-top:  1.1px !important;
+        width: 32px;
+        font-size: 12px;
+        display: inline-block;
+        margin-top:-1px;
+    }
+}
+
+
+.slider.slider-horizontal {
+    width: 100%;
+    height: 20px;
+}
+
+.slider-selection{
+    background-image:none;
+}
+
+
+.slider-track {
+    position: absolute;
+    cursor: pointer;
+    background-image: -webkit-linear-gradient(top, #f5f5f5 0%, #f9f9f9 100%);
+    background-image: none;
+    background-image: none;
+    background-repeat: repeat-x;
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#fff5f5f5', endColorstr='#fff9f9f9', GradientType=0);
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    border-radius: 0px;
+    height: 2px !important;
+    margin-top: -5px !important;
+    background-color: black !important;
+    top: 12px !important;
+}
+
+.slider-track.min-slider-handle {
+        margin: -14px 0 0 0px !important;
+        width: 6px !important;
+        height: 25px;
+        background-color: red;
+        outline: none !important;
+        box-shadow: none !important;
+        border-radius: 0;
+        background-image:none;
+    }
+.slider-handle {
+        margin: -8px 0 0 0px !important;
+        width: 6px !important;
+        height: 25px;
+        background-color: red;
+        outline: none !important;
+        box-shadow: none !important;
+        border-radius: 0;
+        background-image:none;
+    }
+.slider-handle.round{
+    border-radius:0px;
+}

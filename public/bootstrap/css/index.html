@@ -1,0 +1,896 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Waleteros - Prepaid Debit Card | Mobile Check Cashing</title>
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+<link rel="shortcut icon" href="img/favicon.ico">
+<link rel="stylesheet" href="bootstrap/css/bootstrap.css">
+<link rel="stylesheet" href="bootstrap/css/responsive-lg.css">
+<!-- Using only with Flat-UI (free)-->
+<link rel="stylesheet" href="css/icon-font.css">
+<!-- end -->
+<link rel="stylesheet" href="css/animations.css">
+<link rel="stylesheet" href="css/ui-kit-styles.css">
+<link type="text/css" rel="stylesheet" href="css/jquery.localizationTool.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.css">
+
+<style>
+.fixed {
+    width: 100%;
+    left: 0;
+    position: fixed;
+    top: 0;
+    z-index: 99;
+    background: #fff;
+    opacity: 0.95;
+	}
+  td {
+    font-family: "RobotoLight", sans-serif;
+    font-size: 17px;
+}
+
+</style>
+
+</head>
+
+<body>
+
+
+
+<div class="page-wrapper" style="min-height:0px; display:none">
+  <div class="container hiden-sm hidden-xs" id="toggledisplay" style="width:100%; background-color: #C8D8EB; height:0px; padding-bottom:53px; z-index:1000; display:none">
+    <div class="row">
+      <nav >
+        <div class="navbar-header" style="width:100%; background-color: #C8D8EB;">
+          <div class="col-md-6 col-md-offset-3" style="padding: 12px;">
+             <div class="col-lg-10 col-lg-offset-1 col-md-12 col-md-offset-0" style="">
+            <div class="col-md-7" id="selLang" style="font-size:20px; text-align:right; color:#7f8c8d">
+              Select a Language
+            </div>
+            <div id="selectLanguageDropdown" class="localizationTool col-md-5" style="height: 28px;
+width: 100px;"></div>
+              </div>
+          </div>
+            <a><img onClick="toggledisplay();" style="max-height: 20px;  text-align: right; vertical-align: middle; float: right; margin-right: 20px; margin-top:15px;" src="img/button_popup_close2.png"></a> </p>
+        </div>
+      </nav>
+    </div>
+  </div>
+<!-- header-1 -->
+<header class="header-1 hidden-lg hidden-md">
+  <div class="">
+    <div class="row">
+      <nav class="navbar" role="navigation">
+        <div class="navbar-header" style="">
+
+           <div class="col-xs-2 col-sm-4" style="padding:0px;">
+        <a class="brand" href="index.html" style="float:left"> <img src="img/header/3_Logos2.png" class="img-responsive" style="width:100%"  alt=""></a>
+               </div>
+            <div class="col-xs-8 col-sm-4 mobi-icons" style="">
+                <div class="col-xs-6 col-sm-6" style="padding:5px;">
+            <a href="https://itunes.apple.com/app/id997727719?mt=8"><img src="img/appstor.png" class="img-responsive" style="border-radius:3px;"></a> </div>
+                <div class="col-xs-6 col-sm-6" style="padding:5px;">
+            <a href="https://play.google.com/store/apps/details?id=com.waleteros.activities&referrer=adjust_reftag%3DclaXneHWclyWX" style=""><img src="img/btn_play.png" class="img-responsive" style="border-radius:3px;"></a>
+                </div>
+            </div>
+
+                 <div class="col-xs-2 col-sm-4">
+               <button type="button" class="navbar-toggle" style="float:right"></button>
+                     </div>
+        </div>
+        <div class="collapse navbar-collapse">
+          <ul class="nav pull-right">
+		   <li><a href="index.html" class="sideNavHome">HOME</a> </li>
+            <li><a href="feesandtransaction.html" class="sideNavFees">FEES AND TRANSACTION LIMITS</a> </li>
+            <li><a href="TermsAndConditions.html" class="sideNavTerms">LEGAL NOTICE</a> </li>
+            <li><a href="CardholderAgreement.html" class="sideNavAgreement">CARDHOLDER AGREEMENT</a> </li>
+            <li><a href="#" class="sideNavSupport">SUPPORT CENTER</a> </li>
+            <li><a class="sideNavViewpage" style="cursor:pointer;">VER PÁGINA EN ESPAŇOL</a> </li>
+          </ul>
+        </div>
+      </nav>
+    </div>
+  </div>
+</header>
+
+
+
+</div>
+<div style="position: relative;">
+<header class="header-1 hidden-sm hidden-xs page-wrapper" id="mainnav" style="min-height:0px;">
+    <div class="row topDisplay">
+      <nav class="navbar " role="navigation" >
+        <div class="navbar-header">
+
+      <div class="col-md-2">
+    <a class="brand" href="index.html" style="float:left"> <img src="img/header/3_Logos1.png" width="170" alt=""></a>
+      </div>
+            <div class="col-md-9 ">
+
+              <div class="">
+                <div style="padding:0px 10px;">
+                  <ul>
+                      <li> <a href="#services" id="topMenuServices">SERVICES</a> </li>
+                      <li> <a href="#fees " id="topMenuFees">FEES</a> </li>
+                      <li> <a href="#join" id="topMenuJoin">JOIN</a> </li>
+                      <li> <a href="#CustomerService" id="topMenuCustSer">CUSTOMER SERVICE</a> </li>
+                      <li> <a href="" id="topMenuFaq">FAQ</a> </li>
+                  </ul>
+                </div>
+              </div>
+
+            </div>
+            <div class="col-md-1" style="padding:0px">
+          <button type="button" class="navbar-toggle" style="float:right; margin-right:15px;"><img src="img/menu-icon-header-17@2x.png" width="43" alt=""></button>
+                </div>
+            </div>
+      </nav>
+  </div>
+
+  <div class="row mobi-iconslg" style="display:none">
+    <nav class="navbar " role="navigation" >
+      <div class="navbar-header">
+
+    <div class="col-md-2">
+  <a class="brand" href="index.html" style="float:left"> <img src="img/header/3_Logos1Old.png" width="170" alt=""></a>
+    </div>
+          <div class="col-md-8 " style="padding-top:6px">
+            <div>
+              <div class="col-md-6" style="padding:0px 10px;">
+              <a href="https://play.google.com/store/apps/details?id=com.waleteros.activities&referrer=adjust_reftag%3DclaXneHWclyWX" style="float:right"><img src="img/btn_play.png" class="img-responsive" style="border-radius:3px;"></a> </div>
+              <div class="col-md-6" style="padding:0px 10px;">
+              <a href="https://itunes.apple.com/app/id997727719?mt=8"   style="float:left"><img src="img/appstor.png" class="img-responsive" style="border-radius:3px;"></a>
+              </div>
+            </div>
+
+          </div>
+          <div class="col-md-2" style="padding:0px">
+        <button type="button" class="navbar-toggle" style="float:right; margin-right:15px;"><img src="img/menu-icon-header-17@2xOld.png" width="43" alt=""></button>
+              </div>
+          </div>
+    </nav>
+</div>
+</header>
+</div>
+<a href="#" id="back-to-top" title="Back to top"><i class="fa fa-arrow-up" aria-hidden="true"></i></a>
+<div class="page-wrapper" style="position: absolute;  top: 0;">
+
+  <div class="header-1-sub section">
+  <div id="pt-main" class="page-transitions pt-perspective">
+    <div class="pt-page pt-page-1">
+      <div class="background"></div>
+      <div class="caption">
+        <div class="container">
+
+          <h3 class="hidden-sm hidden-xs" style="" id="imageHeading">MOBILE BANKING FOR EVERYONE</h3>
+          <h3 class="hidden-lg hidden-md" style="font-size:30px;"><span id="imageHeadingM1">MOBILE BANKING</span><br><span id="imageHeadingM2">FOR EVERYONE</span></h3>
+
+          <p class="hidden-sm hidden-xs" style="">
+
+          <span id="pageHeadLine">Get paid, pay your bills and send money from your phone</span> <br><span id="pageHeadLine1"> with the Waleteros app and your Waleteros Prepaid Visa</span><sup ><span style="font-size:11px;">&reg; </span></sup> <span id="pageHeadLine2" style="color:#fff"> Card </span></p>
+
+           <p class="hidden-lg hidden-md" style="line-height:22px; color:#fff; text-align:center; padding-top:20px;"><span id="mobilepageHeadLine1">Get paid, pay your bills and send money from your phone </span><br><span id="mobilepageHeadLine2"> with the Waleteros app and your Waleteros Prepaid Visa<sup style="padding-right:5px"><span style="font-size:12px">&reg;  </span></sup> <span id="mobilepageHeadLine3">Card </span></p>
+
+
+        </div>
+      </div>
+    </div>
+  </div>
+  </div>
+
+<div class="row btmAppIcons">
+
+        <div class="col-md-12 " style="padding-top:15px">
+          <div>
+            <div class="col-md-6" style="padding:0px 10px;">
+            <a href="https://play.google.com/store/apps/details?id=com.waleteros.activities&referrer=adjust_reftag%3DclaXneHWclyWX" style="float:right"><img src="img/btn_play.png" class="img-responsive" style="border-radius:3px;"></a> </div>
+            <div class="col-md-6" style="padding:0px 10px;">
+            <a href="https://itunes.apple.com/app/id997727719?mt=8"   style="float:left"><img src="img/appstor.png" class="img-responsive" style="border-radius:3px;"></a>
+            </div>
+          </div>
+
+        </div>
+
+</div>
+
+
+<!--===//Row 2 WHY YOU SHOULD//====--->
+<div class="joinwalet container" id="section1">
+<div class="row">
+<div class="col-md-8 col-md-offset-2 col-xs-10 col-xs-offset-1 col-sm-10 col-sm-offset-1 whyshould">
+  <h3 class="waleMakesYourLife" ><span id="waleMakes">WALETEROS MAKES YOUR LIFE</h3>
+
+    <div class="col-md-4 hidden-sm hidden-xs" style="text-align:center"> <img src="img/PHapp.png" class="img-responsive" style="margin:0px auto;"> </div>
+  <div class="col-md-8">
+    <div class="col-md-12 waleMakesYourLifeTop">
+      <h4 id="moreAfford" style="font-weight:400; color:#00b286; margin: 0;">MORE AFFORDABLE</h4>
+      <p id="noMonthly">No monthly fee with our “Pay per Use" plan.</p>
+    </div>
+    <div class="col-md-12 waleMakesYourLifeTop">
+      <h4 id="moreConv" style="font-weight:400; color:#00b286; margin: 0;">MORE CONVENIENT</h4>
+      <p><span id="cashChecks">Cash checks in just minutes</span><sup style="font-size:10px;">1</sup>, <span id="cashChecks1">pay bills or   send   money   from   your phone.</span> </p>
+    </div>
+    <div class="col-md-12 waleMakesYourLifeTop">
+      <h4 id="safer" style="font-weight:400; color:#00b286; margin: 0;">SAFER</h4>
+      <p><span id="yourMoneyis">Your  money is  protected  according to Visa</span><sup>&reg;</sup> <span id="yourMoneyis1">Zero Liability Policy</span><sup style="font-size:10px;">2</sup>.</p>
+    </div>
+    <div class="col-md-12 waleMakesYourLifeTop">
+      <h4 id="happier" style="font-weight:400; color:#00b286; margin: 0;">HAPPIER</h4>
+      <p id="saveTime" >Save time and money. </p>
+    </div>
+  </div>
+  <div class="col-md-4 whyshould-title3" style="">
+
+  </div>
+</div>
+<div class="col-sm-4 col-sm-offset-4 col-xs-10 col-xs-offset-1" style="padding:20px 0; ">
+
+</div></div></div>
+
+
+<!--===//Row 3 Keep your Money Safe//====--->
+
+<div class="keepYourMoney">
+<div class="row cards">
+  <div class="container">
+  <div class="col-md-12 title" id="saferThanCash">SAFER THAN CASH</div>
+  <div class="col-md-12 subtitle" id="withWaleYour">With Waleteros, your Money is 100% guarantee by the FDIC and guarded by the Metropolitan Commercial Bank of New York.</div>
+  <div class="col-md-10 col-md-offset-1 moneycards" style="margin-top:15px;">
+    <div class="col-md-4 col-sm-4 card3" style=" text-align:center;"><img src="img/cardimg1.png" class="img-responsive" alt="card1"></div>
+    <div class="col-md-4 col-sm-4 card2" style=" text-align:center; padding:20px 0 0"><img src="img/cardimg2.png" class="img-responsive" alt="card1"></div>
+    <div class="col-md-4 col-sm-4 card1"><img src="img/cardimg3.jpg" class="img-responsive" alt="card1"></div>
+  </div>
+</div>
+</div>
+</div>
+
+<!--===//Row 4 YOUR MONEY AVAILABLE 24/7 //====--->
+<div class="yourMoneyAvailable container"  id="services">
+<div class="container">
+<div class="row" style="padding:55px 100px 100px;">
+    <div class="wpb_column column_container"  id="yourMoneyAvailable"><h3 style="color:#12b795;"><img src="img/clock.png" class="img-responsive" alt="clock"><span id="yourMoneyAvailableT" style="padding-left:15px;">YOUR MONEY AVAILABLE 24/7</h3></div>
+
+</div>
+</div>
+
+<div class="container">
+
+<div class="col-md-3 col-sm-6">
+        <div class="product-single">
+                    <div class="post-desk">
+            <h4><a href="#" id="getPaid">GET PAID</a></h4>
+          </div>
+          <div class="post-img"  style="text-align: -moz-center;">
+            <img src="img/getpaid.jpg" class="img-responsive" alt="product">
+          </div>
+
+        </div><!-- /.END SINGLE-POST -->
+      </div>
+
+<div class="col-md-3 col-sm-6">
+        <div class="product-single">
+                    <div class="post-desk">
+            <h4><a href="#" id="pay">PAY</a></h4>
+          </div>
+          <div class="post-img"  style="text-align: -moz-center;">
+            <img src="img/pay.png" class="img-responsive" alt="product">
+          </div>
+
+        </div><!-- /.END SINGLE-POST -->
+      </div>
+<div class="col-md-3 col-sm-6">
+        <div class="product-single">
+                    <div class="post-desk">
+            <h4><a href="#" id="send">SEND</a></h4>
+          </div>
+          <div class="post-img"  style="text-align: -moz-center;">
+            <img src="img/send.png" class="img-responsive" alt="product">
+          </div>
+
+        </div><!-- /.END SINGLE-POST -->
+      </div>
+
+
+
+<div class="col-md-3 col-sm-6">
+        <div class="product-single">
+                    <div class="post-desk">
+            <h4><a href="#" id="control">CONTROL</a></h4>
+          </div>
+          <div class="post-img" style="text-align: -moz-center;">
+            <img src="img/control.png" class="img-responsive" alt="product">
+          </div>
+
+        </div><!-- /.END SINGLE-POST -->
+      </div>
+
+
+
+
+</div>
+</div>
+<!--===//Row 5 GET PAID FASTER //====--->
+
+
+<div class="container">
+<div class="col-sm-10 col-sm-offset-1 col-md-10 col-md-offset-1 getPaidFaster" >
+<p class="hidden-md hidden-lg" style="width: 100%; font-size: 20px;text-align:center; color:#013B4A; font-weight:900; " id="getPaidFasterM">GET PAID FASTER
+  </p>
+  <div class="col-sm-6 center"> <img src="img/AccessMoneyFaster.png" class="img-responsive" style="margin:0px auto"> </div>
+  <div class="col-sm-6 paddingTop" style="">
+    <div class="col-sm-12" style="padding:0px;">
+      <div class="hidden-sm hidden-xs" style="padding:20px;"></div>
+      <p class="hidden-sm hidden-xs titleWalet"  id="getPaidFaster">GET PAID FASTER
+  </p>
+      <p class="main-text" style="margin:18px 0 25px"><span id="cashYourChecksinMinute">Cash your checks in minutes</span><sup style="font-size:10px;">1</sup> <span id="cashYourChecksinMinute1">  or get your paycheck and</span> <br> <span id="cashYourChecksinMinute2">government benefits up to 2 business days faster with </span><br> <span id="cashYourChecksinMinute3">Direct Deposit.</span></p>
+    </div>
+    <div class="col-sm-12"  style="padding:0px">
+      <div class="col-md-5 col-sm-12 sub-text" style="padding:0px;">
+        <p class="mainSub"><img  src="img/bullet.svg"/><span id="directDeposit">DIRECT DEPOSIT</span></p>
+      </div>
+      <!--div class="col-md-1 hidden-sm hidden-xs"><img src="img/seperator.svg"></div-->
+      <div class="col-md-7 col-sm-12 sub-text" style="padding:0px;">
+          <p class="mainSub"><img  src="img/bullet.svg"/><span id="mcCashing">MOBILE CHECK CASHING </span> </p>
+      </div>
+    </div>
+
+  </div>
+</div>
+</div>
+
+<!-- end of the row-->
+
+<div class="container">
+<div class="col-sm-12 col-md-10 col-md-offset-1 payBillsinUSA">
+    <p class="hidden-md hidden-lg" style="width: 100%; font-size: 20px;text-align:center; color:#013B4A; font-weight:900; "  id="payBillsinUSAabroadM">PAY BILLS IN USA AND ABROAD
+  </p>
+  <div class="col-sm-6 paddingTop2" style="">
+    <div class="col-sm-12">
+      <div class="hidden-sm hidden-xs" style="padding:20px;"></div>
+      <p class="hidden-sm hidden-xs titleWalet"  id="payBillsinUSAabroad">PAY BILLS IN USA AND ABROAD
+  </p>
+      <p class="main-text" style="margin:18px 0 25px"><span id="waletDoNotCharge">Waleteros do not charge foreign transaction fees, so</span> <br><span id="waletDoNotCharge1">  you can pay bills in your country at no cost to you. </span></p>
+    </div>
+    <div class="col-sm-12"  >
+      <div class="col-md-6 col-sm-12 sub-text" style="padding:0px;">
+        <p  class="mainSub"><img  src="img/bullet.svg"/><span id="noForeignFees">NO FOREIGN FEES</span></p>
+      </div>
+      <div class="col-md-6 col-sm-12 sub-text" style="padding:0px;">
+          <p class="mainSub"><img  src="img/bullet.svg"/><span id="worldWide">WORLDWIDE</span> </p>
+      </div>
+    </div>
+  </div>
+
+  <div class="col-sm-6 center"> <img src="img/Send-Receive-Money.jpg" class="img-responsive" style="margin:0px auto"> </div>
+</div>
+</div>
+
+
+
+<div class="container">
+<div class="col-sm-12 col-md-10 col-md-offset-1 sendMoneyAbroadM">
+    <p class="hidden-md hidden-lg titleWalet"  id="sendMoneyAbroadM">SEND MONEY FOR $1
+  </p>
+  <div class="col-sm-6 center"> <img src="img/map.png" class="img-responsive" style="margin:0px auto"> </div>
+  <div class="col-sm-6 paddingTop3" style=" ">
+    <div class="col-sm-12" style="padding:0px">
+      <div class="hidden-sm hidden-xs" style="padding:20px;"></div>
+      <p class="hidden-sm hidden-xs titleWalet" id="sendMoneyAbroad">SEND MONEY FOR $1
+  </p>
+      <p class="main-text"  style="margin:20px 0"><span id="sendMoneyTo">Send money to your family and friends
+from your cellphone with the Waleteros App</span><sup style="font-size:10px;">3</sup>.</p>
+    </div>
+    <div class="col-sm-12" style="padding:0">
+      <div class="col-md-6 col-sm-12 sub-text" style="padding:0px;">
+        <p class="sub-text mainSub"><img  src="img/bullet.svg"/><span id="whereEverYouAre">WHEREVER YOU ARE</span></p>
+      </div>
+      <div class="col-md-6 col-sm-12 sub-text" style="padding:0px;">
+          <p class="mainSub" ><img  src="img/bullet.svg"/><span id="to150Countries">TO OTHER WALETEROS</span> </p>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+<!-- end of the row-->
+
+<div class="container">
+<div class="col-sm-12 col-md-10 col-md-offset-1 controlAndProtect">
+    <p class="hidden-md hidden-lg" style="width: 100%; font-size: 20px;text-align:center; color:#013B4A; font-weight:900; "  id="controlAndProtectM">CONTROL AND PROTECT
+  </p>
+
+  <div class="col-sm-6" style="padding:20px 0 0; ">
+    <div class="col-sm-12">
+      <div class="hidden-sm hidden-xs" style="padding:13px;"></div>
+      <p class="hidden-sm hidden-xs titleWalet" id="controlAndProtect">CONTROL AND PROTECT
+  </p>
+      <p class="main-text"  style="margin:20px 0"><span id="ifYourCardisLost">If your card is lost, stolen or misplaced, protect your </span><br> <span id="ifYourCardisLost1">money at any time by blocking your card from the Waleteros App</span><sup style="font-size:10px;">4</sup>.</p>
+    </div>
+    <div class="col-sm-12">
+      <div class="col-md-4 col-sm-12 sub-text" style="padding:0px;">
+        <p class="sub-text mainSub"><img  src="img/bullet.svg"/><span id="smsAlerts">SMS ALERTS</span><sup>1</sup> </p>
+      </div>
+      <div class="col-md-8 col-sm-12 sub-text" style="padding:0px;">
+          <p class="mainSub"><img  src="img/bullet.svg"/><span id="blockUnblock">BLOCK / UNBLOCK</span> </p>
+      </div>
+    </div>
+  </div>
+
+  <div class="col-sm-6 center cardVisa"> <img src="img/cardvisa.png" class="img-responsive" style="margin:0px auto"> </div>
+</div>
+</div>
+<!-- end of the row--> <!-- end of the row-->
+
+
+<!-- Start Slider-->
+<section class="row">
+<div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+
+
+  <!-- Wrapper for slides -->
+  <div class="carousel-inner" role="listbox">
+    <div class="item active">
+      <img src="img/slider2.png" height='595px' width="100%" alt="...">
+      <div class="carousel-caption" style=" position:absolute; top:0%;left:0%; width:100%;">
+        <div  class="p1">
+				<p style="text-align:left"> <span id="testmonyAa">“I used to worry every time I walked </span><br> <span id="testmonyAa1">out of the check cashing store with </span><br><span id="testmonyAa2">cash. Now, thanks to Waleteros, my </span><br><span id="testmonyAa3">money is protected”.</span><br>
+				</p>
+        <span class="pSpan"> Orlando Gutierrez</span>
+          </div>
+
+      </div>
+    </div>
+    <div class="item">
+      <img src="img/slider3.png" height='595px' width="100%" alt="...">
+      <div class="carousel-caption" style=" position:absolute; top:0%;left:0%; width:100%;">
+        <div  class="p2">
+				<p> <span id="testmonyAb">“I used to pay  $2 or  $3 to pay my bills.</span> <br><span id="testmonyAb1">With my Waleteros card, I pay my bills</span><br> <span id="testmonyAb2">and shop online at no cost”.</span><br>
+				</p>
+        	<span class="pSpan"> Sonia Rodriguez</span>
+            </div>
+      </div>
+    </div>
+	<div class="item">
+      <img src="img/slider1.png" height='595px' width="100%" alt="...">
+      <div class="carousel-caption" style=" position:absolute; top:0%;left:0%; width:100%;">
+        <div  class="p3">
+			<p>
+        <span id="testmonyAc"> "I used to wait in long lines to send</span> <br><span id="testmonyAc1">money to my Mother in Mexico.</span> <br><span id="testmonyAc2">Now, instead of that, I pay her bills </span><br><span id="testmonyAc3">in Mexico on my phone at not cost to me!”.</span>
+
+      			</p>
+      	<span class="pSpan"> Camila Vega</span>
+          </div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Controls -->
+  <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+    <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span-->
+    <span class="sr-only">Previous</span>
+  </a>
+  <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+    <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+    <span class="sr-only">Next</span>
+  </a>
+</div>
+
+</section>
+
+<!-- End Slider-->
+
+
+<div class="container">
+  <div class="col-sm-12 col-md-10 col-md-offset-1 yourVirtualCard" id="yourVirtualCard">
+      <p class="hidden-md hidden-lg" style="width: 100%; font-size: 20px;text-align:center; color:#013B4A; font-weight:900; "  id="yourVirtualCardM">YOUR VIRTUAL CARD IN MINUTES!</p>
+    <div class="col-sm-6 center  yourVirtual"> <img src="img/your vertuel.png" class="img-responsive" style=""> </div>
+    <div class="col-sm-6" style="padding:0px;">
+      <div class="col-sm-12">
+        <div class="hidden-sm hidden-xs topVir" style=""></div>
+        <p class="hidden-sm hidden-xs titleWalet"  id="yourVirtualCardT">YOUR VIRTUAL CARD IN MINUTES!</p>
+        <p class="main-text" style="margin:18px 0 25px" ><span id="startUsingWale">Start using Waleteros today to send money, buy online or </span> <br><span id="startUsingWale1">by phone and with Android Pay. </span><br> <span id="startUsingWale2">In a few days, you will receive your physical card.</span> </p>
+      </div>
+      <div class="col-sm-12">
+        <div class="col-md-8 col-sm-12 sub-text" style="padding:6px 0px 0;">
+          <p class="sub-text mainSub" ><img  src="img/bullet.svg"/><span id="virtualAndPhysical">VIRTUAL & PHYSICAL CARD</span></p>
+        </div>
+        <div class="col-md-4 col-sm-12 sub-text" style="padding:10px;">
+            <p class="mainSub android" ><img src="img/bullet.svg"/><img src="img/android.png" class="img-responsive " alt="android"> </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Start Fees-->
+<div class="fees hidden-sm hidden-xs noMonthly container"  id="fees" >
+  <div class="row">
+    <div class="col-sm-12 col-md-10 col-md-offset-1">
+      <h3 style="text-align:center; color:#00b286;"> <span id="noMonthlyT">NO MONTHLY, OVERDRAFT OR INACTIVITY FEES</h3>
+ </div>
+  </div>
+
+      <div class="row">
+         <div class="col-md-12" id="tableGrid" style="margin-top:25px;">
+            <div class="col-md-12 payPerPlan" id="payPerUsePlan">  PAY PER USE PLAN </div>
+            <div class="col-md-6">
+              <div class="row" style="margin-right: -15px;">
+                <div class="col-md-10 left" style=" padding:0;  margin-right:-15px" id="appCardSign"> App, Card, Sign up or Monthly maintenance </div>
+                <div class="col-md-2 right"> No fee </div>
+              </div>
+
+              <div class="row">
+                <div class="col-md-10 left" > <span id="custSerSMS">Customer Service and SMS alerts*</span><br>
+                  <span  class="smLtr" id="wireLess">  (*wireless carrier fees may apply)</span>
+                 </div>
+                <div class="col-md-2 right"> No fee </div>
+              </div>
+
+              <div class="row">
+                <div class="col-md-10 left" id="receDirect"> Receive Direct Deposit  </div>
+                <div class="col-md-2 right"> No fee </div>
+              </div>
+
+              <div class="row">
+                <div class="col-md-10 left"><span id="payRollGov">Payroll and government checks funded in minutes</span><sup>1</sup>
+  </div>
+                <div class="col-md-2 right onPrice"> 1.5% </div>
+              </div>
+
+              <div class="row">
+                <div class="col-md-10 left"><span id="otherCheck">Other accepted check types funded  in minutes</span><sup> 1</sup>
+  </div>
+                <div class="col-md-2 right onPrice"> 4.5% </div>
+              </div>
+
+              <div class="row">
+                <div class="col-md-10 left"><span id="accpCheck">Accepted check types funded in 10 days if not returned unpaid</span><sup> 1</sup>
+  </div>
+                <div class="col-md-2 right"> No fee </div>
+              </div>
+
+              <div class="row" style="border-bottom: 1px solid #e9e9e9;">
+                <div class="col-md-10 left"><span id="loadCashThird">Load cash through third parties</span><br>
+                  <span  class="smLtr" id="moneyGramDot">  (Moneygram & GreenDot charge approx. $4)</span>
+                 </div>
+                <div class="col-md-2 right"> No fee </div>
+              </div>
+
+            </div>
+
+            <!-- End of 1st col-->
+
+            <div class="col-md-6">
+              <div class="row" style="margin-left: -15px; padding-left:15px">
+                <div class="col-md-10 left" style="padding:0;" id="onlinePhoneSign">Online, phone or signature purchase
+  </div>
+                <div class="col-md-2 right"> No fee </div>
+              </div>
+
+              <div class="row">
+                <div class="col-md-10 left" id="payUseCard">Payment using card PIN
+  </div>
+                <div class="col-md-2 right onPrice"> $1 </div>
+              </div>
+
+              <div class="row">
+                <div class="col-md-10 left"><span id="withDrawPlus">Withdraw cash at “Plus Alliance” ATMs</span><br>
+                  <span  class="smLtr" id="addiThirdPart">  (additional third parties fees may apply outside
+the “Plus Alliance” network) </span>
+                 </div>
+                <div class="col-md-2 right onPrice"> $2 </div>
+              </div>
+
+              <div class="row">
+                <div class="col-md-10 left" id="sendMoneyOth">Send money to other Waleteros
+  </div>
+                <div class="col-md-2 right onPrice"> $1 </div>
+              </div>
+
+              <div class="row">
+                <div class="col-md-10 left"><span id="cardReplcmt">Card replacement, express shipping or check refund</span>
+                  <span  class="smLtr" id="eachPer">  (each per transaction)  </span>
+                 </div>
+                <div class="col-md-2 right onPrice"> $10 </div>
+              </div>
+
+              <div class="row">
+                <div class="col-md-10 left" id="forgnTran">Foreign transaction
+  </div>
+                <div class="col-md-2 right"> No fee </div>
+              </div>
+
+            </div>
+
+         </div>
+      </div>
+    </div>
+
+
+
+
+<div class="joinWaleterosIn container" id="join" >
+<div class="hidden-lg hidden-md" style="background:#00B388; padding:48px 0; height: 180px;">
+<a href="MobileFee.html">
+    <div class="col-sm-12">
+        <div class="col-sm-9 col-xs-9">
+<p class="seeall" style=""><span id="seeAll"> SEE ALL OF OUR </span> <br><span id="affordFee">SIMPLE, AFFORDABLE</span> <br><span id="affordFeeT"> FEES</span></p>
+    </div>
+        <div class="col-sm-3 col-xs-3" style="padding:0px">
+<img class="seeallimg"  src="img/arrow.png" >
+        </div>
+    </div>
+</a>
+</div>
+
+<div>
+
+    <h3 style=""><span id="joinWaleterosIn3">JOIN WALETEROS IN 3 MINUTES </span><br><span id="noCreditReq">NO CREDIT CHECK IS REQUIRED*  </span></h3>
+    <p id="subJectId">*Subject to ID verification</p>
+</div>
+<div class="container hidden-md hidden-lg">
+  <div class="col-sm-12">
+    <div class="col-sm-4 col-xs-12 " style="text-align:center"> <img src="img/Step-1.png" />
+      <p style="   font-size: 18px; margin-bottom: 0; color:#013B4A;" id="DownloadOurApp">Download our app </p>
+    </div>
+    <div class="col-xs-12 hidden-sm" style="height:25px;"></div>
+    <div class="col-sm-4 col-xs-12 " style="text-align:center"> <img src="img/Step-2.png" />
+      <p style="   font-size: 18px; margin-bottom: 0; color:#013B4A;" id="dDLchecks">Deposit money <span style="font-size:12px"> (Direct Deposit, load checks <sup> 1</sup> or cash) </span></p>
+    </div>
+    <div class="col-xs-12 hidden-sm" style="height:25px;"></div>
+    <div class="col-sm-4 col-xs-12" style="text-align:center"> <img src="img/Step-3.png" />
+      <p style="   font-size: 18px; margin-bottom: 0; color:#013B4A;" id="buyPaybillsAndSendMoney">Buy, Pay Bills and Send money with your Virtual Card</p>
+    </div>
+  </div>
+
+</div>
+
+<div id="banner_wrap" class="col-md-8 col-md-offset-2 hidden-sm hidden-xs" style="margin-top:45px">
+<div class="col-md-10 col-md-offset-1 bannerWrapLinesTop" >
+
+<div class="col-md-4 bannerWrapLines" style="padding:0px"></div>
+<div class="col-md-4 bannerWrapLines" style="padding:0px"></div>
+<div class="col-md-4 bannerWrapLines" style="padding:0px"></div>
+
+</div>
+<div class="col-md-3" style="text-align:center">
+<img src="img/Step-1.png"/>
+<p ><span id="DownloadOurAppSignup"> Download our App </span></p>
+
+</div>
+
+<div class="col-md-3" style="text-align:center">
+<img src="img/Step-2.png"/>
+<p  id="depositMoneyDD">Deposit Money</p>
+</div>
+
+<div class="col-md-3" style="text-align:center">
+<img src="img/Step-3.png"/>
+<p><span id="buyPayWithVirtualCard">Buy, Pay Bills and  </span><br><span id="buyPayWithVirtualCard1">Send money with </span><br><span id="buyPayWithVirtualCard2">your Virtual Card</span></p>
+</div>
+
+<div class="col-md-3" style="text-align:center">
+<img src="img/Step-4.png"/>
+<p><span id="receiveYourCard">Receive your </span><br> <span id="physCard">Physical Card </span> <br> <span id="receiveYourCard2">in a few days</span></p>
+</div>
+
+</div>
+  </div>
+
+
+
+<!-- end of the row-->
+<div class="row CustomerServiceYouDeserve" id="CustomerService">
+  <div class="container">
+  <div class="col-sm-12 col-md-10 col-md-offset-1">
+
+    <div class="col-md-5 hidden-sm hidden-xs img-md-t"> <img src="img/support-image_new.png" class="img-responsive" style="margin:0px auto"> </div>
+    <div class="col-md-7 hidden-sm hidden-xs WithWaleYouarejustaText">
+      <div class="col-md-12 ">
+        <h3 style="" id="CustomerServiceYouDeserve">WALETEROS ANSWER YOUR QUESTIONS 24/7</h3>
+        <div class="hidden-sm hidden-xs txt-md-top" style=""></div>
+
+        <a href="http://support.waleteros.com/hc/en-us" class="supportBig" id="goToSuppCent">GO TO THE SUPPORT CENTER</a>
+        <div class="paraSet">
+        <p id="orCalltoTalk">Or call  844-TUWALLET to talk with us.
+          </p>
+               </div>
+
+
+      </div>
+
+      <div class="socialIcons" style="">
+        <span style="float:right; padding-right:13px; margin-top:4px">
+        <a href="" style="padding:0px 5px"><img src="img/fb.png"></a>
+          <a href="" style="padding:0px 5px"><img src="img/instagram.png"></a>
+            <a href="" style="padding:0px 5px"><img src="img/twitter.png"></a>
+            </span>
+      </div>
+
+    </div>
+      <div class="col-sm-12 col-xs-12 hidden-md hidden-lg" style="padding:0px;">
+      <div class="col-sm-12">
+        <div class="hidden-sm hidden-xs" style="padding:40px;"></div>
+        <h4 style="text-align:center;    font-size: 30px;    font-family: Roboto;    font-weight: 800; color:#013b4a" id="CustomerServiceYouDeserveM">CUSTOMER SERVICE YOU DESERVE</h4>
+        <p style="font-size: 17px; color:black; text-align:center"><span id="WithWaleYouarejustaTextM">With Waleteros, you're just a text or phone call away to interact with real people who are dedicated to help you when you need them.</span> </p>
+        <p class="WithWaleYouarejustaTextMT"><span id="WithWaleYouarejustaTextMT">Our #1 objective is simple:</span><br><span id="WithWaleYouarejustaTextMTt"> make your life easier.</span></p>
+        <!--a href="http://support.waleteros.com/hc/en-us" style="text-align:center; margin-top:5%"><img style="margin: 0px auto" src="img/PHsupport.png" id="WithWaleYouarejustaImg"></a-->
+          <div style="text-align:center">
+              <a href="http://support.waleteros.com/hc/en-us" class="supportBig"><img style="margin: 0px auto; width:250px " src="img/frequentAsk.png" id="WithWaleYouarejustaImgM"></a>
+          </div>
+        <p style="margin-top: 0; font-size:15px; text-align:center"><i><span id="orCall-TuwaletM">or call 844-TUWALET to talk to</span> <br><span id="orCall-TuwaletMT"> one of our dedicated team members</span></i></p>
+
+      </div>
+    </div>
+  </div>
+    </div>
+
+<!-- end -->
+
+
+  <div class="col-xs-12 col-sm-12 col-md-10 col-md-offset-1 footer">
+  <p style="text-align:left; color: #aeabab; font-size: 12px; display: inline-block; width: 100%; margin: 10px auto 5px; line-height:15px;" id="ImportantInfoFor"> Important information for opening a card account: To help the government fight the funding of terrorism and money laundering activities, Federal law requires all financial institutions and their third parties to obtain, verify, and record information that identifies each person who obtains a Card. What this means for you: When you apply for a Card, we will ask for your name, address, date of birth, social security number or country identification number, and other information that will allow us to identify you. We may also ask to see your driver's license or other documentation bearing your photo as verification of your identity.</p>
+  <p style="text-align:left; color: #aeabab; font-size: 12px; display: inline-block; width: 100%; margin: 5px auto; line-height:15px;" id="theWalePreVcard">The Waleteros Prepaid Visa Card is issued to you by Metropolitan Commercial Bank (Member FDIC) pursuant to a license from Visa U.S.A. Inc. “Metropolitan Commercial Bank” and “Metropolitan” are registered trademarks of Metropolitan Commercial Bank © 2014. Use of card subject to funds availability. Transaction Fees and the Terms and Conditions apply. See Cardholder Agreement for complete details.</p>
+  <p style="text-align:left; color: #aeabab; font-size: 12px; display: inline-block; width: 100%; margin: 5px auto 10px; line-height:15px;" id="waleFintLLC">Waleteros Fintech LLC reserves the right to modify or discontinue any product, service, or special offer with or without prior notice. Waleteros is a trademark of Waleteros Fintech LLC. All other trademarks, service marks, and other registered marks are the property of their respective owners.</p>
+  <p style="text-align:left; color: #aeabab; font-size: 12px; display: inline-block; width: 100%; margin: 5px auto 10px; line-height:15px;"><sup>1</sup> <span id="mobileCLoad">Mobile Check Load is a service provided by First Century Bank, N.A. and Ingo Money, Inc., subject to the First Century Bank and Ingo Money Terms and Conditions, and Privacy Policy. Approval review usually takes 3 to 5 minutes but can take up to one hour. All checks are subject to approval for funding in Ingo Money's sole discretion. Fees apply for approved Money in Minutes transactions funded to your card. Unapproved checks will not be funded to your card. Ingo Money reserves the right to recover losses resulting from illegal or fraudulent use of the Ingo Money Service. Your wireless carrier may charge a fee for message and data usage. Additional transaction fees, costs, terms and conditions may be associated with the funding and use of your card. See your Cardholder Agreement for details.</span>
+  <br><sup>2</sup> <span id="condiAndExcAp">Conditions and exceptions apply. See Cardholder Agreement.</span>
+  <br><sup>3</sup> <span id="inAddtFee">In addition to the transaction fee, Waleteros also makes money when it changes your U.S. dollars into a different currency.</span>
+<br><sup>4</sup> <span id="replcmntFeeApp">Replacement fees may apply.</span></p>
+
+  </div>
+
+</div>
+
+</div>
+
+<!-- Placed at the end of the document so the pages load faster -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+
+<script src="js/bootstrap-select.js"></script>
+<script src="js/modernizr.custom.js"></script>
+<script src="js/page-transitions.js"></script>
+<script src="js/jquery.cookie.js"></script>
+<!--<script src="js/froogaloop.min.js"></script> -->
+<script src="js/jquery.scrollTo-1.4.3.1-min.js"></script>
+<script src="js/startup-kit.js"></script>
+<script src="js/application.js"></script>
+<script src="js/jquery.localizationTool.min.js"></script>
+<script src="js/navLangChanger.js"></script>
+<script src="js/localize_index.js"></script>
+
+<script src="js/main.js"></script>
+<script type="text/javascript" src="js/crawler.js"></script>
+
+<script type="text/javascript">
+marqueeInit({
+	uniqueid: 'mycrawler2',
+	style: {
+		'padding': '9px'
+	},
+	inc: 2, //speed - pixel increment for each iteration of this marquee's movement
+	mouse: 'pause', //mouseover behavior ('pause' 'cursor driven' or false)
+	savedirection: true,
+	random: true,
+	initcontent: function(){
+	 $('#go-right').mouseover(function(){ this.direction="right";this.inc="7"; }.bind(this));
+	 $('#go-left').mouseover(function(){this.direction="left";this.inc="7"; }.bind(this));
+	 $('#go-left').mouseout(function(){this.inc="2"; }.bind(this));
+	 $('#go-right').mouseout(function(){this.inc="2"; }.bind(this));
+	}
+});
+
+function toggledisplay()
+{
+   $('#toggledisplay').hide()
+}
+
+
+ $(document).ready(function( $){
+if(! $.cookie("SelectedLang"))
+ $.cookie("SelectedLang", 'English' );
+
+/*** for stick header  ***/
+     var navpos =  $('#mainnav').offset();
+    console.log(navpos.top);
+     $(window).bind('scroll', function() {
+      if ( $(window).scrollTop() > navpos.top ) {
+         $('#mainnav').addClass('fixed');
+            $('.navbar').addClass('navbarChng');
+          $('.waleMakesYourLife').addClass('joinwaletBtm');
+         $(".topDisplay").hide();
+         $(".mobi-iconScr").hide();
+         $(".btmAppIcons").hide();
+       }
+       else {
+          $('#mainnav').removeClass('fixed');
+          $(".topDisplay").show();
+          $(".mobi-iconScr").show();
+          $(".btmAppIcons").show();
+       }
+    });
+
+
+    $(window).bind('scroll', function() {
+
+     if ( $(window).scrollTop() > $(window).height() ) {
+        $(".btmAppIcons").hide();
+        $(".mobi-iconslg").show();
+      }
+      else {
+         $('#mainnav').removeClass('fixed');
+         $(".mobi-iconslg").hide();
+         $(".btmAppIcons").show();
+      }
+   });
+
+
+
+
+navLangChanger();
+
+/*** Remove  brackets from plugin strings  ***/
+
+ $('.ltool-has-country').each(function(index)
+{
+if( $(this).text()=="(English)")
+ $(this).text("English");
+else
+ $(this).text("Español");
+});
+
+/*** initialize Language based on last selection from cookie value  ***/
+  $("#selectLanguageDropdown").localizationTool('translate', $.cookie("SelectedLang"));
+
+
+ //onClicking SideNav Change Language
+  $(".sideNavViewpage").click(function(){
+   if( $.cookie("SelectedLang") == "English")
+   {
+    $.cookie("SelectedLang",'Español');
+    $("#selectLanguageDropdown").localizationTool('translate','Español');
+   navLangChanger();
+   }
+   else
+   {
+    $.cookie("SelectedLang",'English');
+    $("#selectLanguageDropdown").localizationTool('translate','English');
+   navLangChanger();
+   }
+ })
+ }(jQuery));
+
+</script>
+
+<script type='text/javascript'>//<![CDATA[
+$(window).load(function(){
+if ($('#back-to-top').length) {
+    var scrollTrigger = $(window).height(), // px
+        backToTop = function () {
+            var scrollTop = $(window).scrollTop();
+            if (scrollTop > scrollTrigger) {
+                $('#back-to-top').addClass('show');
+            } else {
+                $('#back-to-top').removeClass('show');
+            }
+        };
+    backToTop();
+    $(window).on('scroll', function () {
+        backToTop();
+    });
+    $('#back-to-top').on('click', function (e) {
+        e.preventDefault();
+        $('html,body').animate({
+            scrollTop: 0
+        }, 700);
+    });
+}
+});//]]>
+
+</script>
+
+</body>
+</html>

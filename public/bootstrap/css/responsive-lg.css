@@ -1,0 +1,57 @@
+@media only screen and (min-width: 1710px) and (max-width: 4000px) {
+#mainnav .navbar-header{
+		width: 100%;
+}
+
+.navbar-header {
+    float: none;
+    font-family: "RobotoLight",sans-serif;
+}
+
+.navbar-toggle {
+    display: block;
+}
+
+.header-1-sub .page-transitions .caption {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top:40%;
+}
+
+.mobi-iconslg{
+	padding-top: 5px;
+}
+
+.caption h3 {
+    font-size: 64px; color: #FFF; font-family: Roboto; font-weight: 800; margin-bottom: 4px;
+}
+body .navbar-collapse {
+    width: 280px;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    height: 100% !important;
+    z-index: 1;
+}
+
+.dot-img1 {
+    position: absolute;
+    left: 76px;
+    right: 0;
+    top: 25px;
+    text-align: center;
+    z-index: -1;
+}
+
+.dot-img2 {
+    position: absolute;
+    left: -21px;
+    right: 0;
+    top: 254px;
+    text-align: center;
+    z-index: -1;
+}
+
+}

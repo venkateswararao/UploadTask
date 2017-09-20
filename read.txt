@@ -1,0 +1,38 @@
+1. I did my task using  React create app , Node.js and  Monogdb
+   To test this application
+     npm install       it install packages  after install packages 
+     npm start     it start application.
+
+2. I am using React Drag and Drop to upload files after broese or drop file in area it show preview data in table.
+
+3. Click on Save button  it save data in to database.
+
+4. Click on Cancel button  to clear records from preview.
+
+5. I am attaching Xl file what i use , you will change content in xl to test this task  but row header name should match what i gave xlfile.
+
+6. I wrote Edit, Delete and get data in node api's.
+
+
+  
+
+7. I am able to do node with mysql also Here is syntax.
+
+  var mysql = require('mysql');
+
+var con = mysql.createConnection({
+  host: "localhost",
+  user: "root",
+  password: "pass123",
+  database: "taskdb"
+});
+
+con.connect(function(err) {
+  if (err) throw err;
+  console.log("Connected!");
+  var sql = "INSERT INTO uploaddata (Technology, Region,Entity,Country,NQCID,NQC,BPCID) VALUES ('Company Inc', 'Highway','Entity','US','121133','M','3131313')";
+  con.query(sql, function (err, result) {
+    if (err) throw err;
+    console.log("1 record inserted");
+  });
+});
